@@ -1,0 +1,16 @@
+body {
+    overflow-x: hidden;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group p {
+    padding: 1.25rem 1.25rem;
+    margin: 0;
+}

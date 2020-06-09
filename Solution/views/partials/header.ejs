@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eXpense sPlit</title>
+    <link rel="stylesheet" href="/stylesheets/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success ">
+            <div class="container-fluid">
+                <a class="navbar-brand pl-5" href="/home">eXSplit</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarExSplit"
+                    aria-controls="navbarExSplit" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExSplit">
+                    <ul class="navbar-nav mr-auto d-md-none">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <%= data.component %>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                                <a class="dropdown-item" href="/groups">Groups</a>
+                                <a class="dropdown-item" href="/family">Family</a>
+                                <a class="dropdown-item" href="/friends">Friends</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Signed in as <%= currentUser.username %></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

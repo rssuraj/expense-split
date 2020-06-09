@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eXpense sPlit</title>
+    <link rel="stylesheet" href="/stylesheets/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/landing.css" />
+</head>
+
+<body>
+
+    <div class="contaier-fluid p-0">
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block">
+                <img src="/images/LoginRegister.jpg" alt="ResponsiveImage" class="img-fluid">
+            </div>
+            <div class="col-lg-4 align-self-center mt-lg-0">
+                <h3 class="text-center text-success mb-5"><%= data.message %></h3>
+                <form class="form" action="<%= data.formAction %>" method="POST">
+                    <div class="form-group btn-group btn-block" role="group" aria-label="LandingPage">
+                        <a id="loginBtn" href="/login" 
+                        class="btn btn-outline-success <%= data.loginClass %>">
+                        Login</a>
+
+                        <a id="registerBtn" href="/register" 
+                        class="btn btn-outline-success <%= data.registerClass %>">
+                        Sign Up</a>
+                    </div>
+                    <% if(!data.isLogin) { %>
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="user[email]" placeholder="Email" required>
+                        </div>
+                    <% } %>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="user[username]" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="user[password]" placeholder="Password"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-md btn-success btn-block">
+                            <% if(data.isLogin) { %>
+                                Login
+                            <% } else { %>
+                                Register
+                            <% } %>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include (`partials/footer`) %>

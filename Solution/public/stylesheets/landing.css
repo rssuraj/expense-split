@@ -1,0 +1,17 @@
+.contaier-fluid {
+    overflow: hidden;
+}
+
+.img-fluid {
+    height: 63rem;
+    width: 100%;
+}
+
+.form {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.col-lg-4 {
+    margin-top: 35%;
+}
